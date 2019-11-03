@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+    <head>
+        <title>site web</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/tether.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+      <header>
+        <h1 id="titre">Site de recherche de fiche rfc</h1>
+
+
+        <script>
+          function search() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('input');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("monUl");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+            }
+          }
+        </script>
+
+        <input type="text" id="input" onkeyup="search()" placeholder="Recherche de fiches">
+
+        <nav>
+          <ul id="monUl">
+            <li><a href="page.php?id=1" data-page="1" >page1</a></li>
+            <li><a href="page.php?id=2" data-page="2" >page2</a></li>
+            <li><a href="./pages/page3.html" data-page="3" >page3</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <h2 id='titrePage'></h2>
+    <section id="content" aria-live="polite" aria-atomic="true" aria-relevant="all"></section>
+
+    <script src="js/init.js"></script>
+
+    </body>
+</html>

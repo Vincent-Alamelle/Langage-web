@@ -1,0 +1,16 @@
+{
+	"Pages": {
+		"1": {
+			"Titre": "Page 1",
+			"Section": "<p>Contenu  Page 1</p>"
+		},
+		"2": {
+			"Titre": "Page 2",
+			"Section": "<p>Contenu  Page 2</p>"
+		},
+		"3": {
+			"Titre": "Page 3",
+			"Section": "<p>Contenu  Page 3</p>"
+		},
+
+}
